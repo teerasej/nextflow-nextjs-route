@@ -6,14 +6,8 @@ import { UserArray } from "../../types/user-array";
 
 export const getStaticProps: GetStaticProps = async () => {
 
-    const users: UserArray = require('../../data/mock_data.json')
+    const results: UserArray = require('../../data/mock_data.json')
 
-    const results = users.map(user => {
-        return {
-            id: user.id,
-            name: user.firstName
-        }
-    })
 
     return {
         props: {
@@ -31,11 +25,8 @@ const UserListPage: NextPage = ({ results }: InferGetStaticPropsType<typeof getS
             <h1>Users</h1>
             {
                 (results as UserArray).map(user => {
-                    
-                    console.log(user)
-
                     return (
-                        <Link href={`users/${user.id}`} key={user.id.toString()}>
+                        <Link href={`users-static/${user.id}`} key={user.id.toString()}>
                             <p>{user.firstName} {user.lastName}</p>
                         </Link>
                     )
