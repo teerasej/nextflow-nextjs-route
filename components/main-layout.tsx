@@ -13,6 +13,10 @@ const MainLayout: NextComponentType = ({children}) => {
                 <a>About</a>
             </Link>
              | 
+            <Link href="/annual-report">
+                <a>Annual Report</a>
+            </Link>
+             | 
             <Link href="/users-static">
                 <a>User</a>
             </Link>
