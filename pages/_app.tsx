@@ -4,6 +4,7 @@ import MainLayout from '../components/main-layout'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
+import './../styles/nprogress.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
