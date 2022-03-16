@@ -8,8 +8,13 @@ const MainLayout: NextComponentType = ({children}) => {
             <Link href="/">
                 <a>Home</a>
             </Link>
+             | 
             <Link href="/about">
                 <a>About</a>
+            </Link>
+             | 
+            <Link href="/users-static">
+                <a>User</a>
             </Link>
             {children}
         </div>
